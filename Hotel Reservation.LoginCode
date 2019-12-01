@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>login</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+</body>
+<div class="container">
+            <div class="row">
+                <div class="col-4 offset-4">
+                    <?php
+                        if(isset($error)){
+                            if($error == true){
+                    ?>
+                    <div class="alert alert-danger">
+                        <b>Error!</b> Invalid Username and Password
+                    </div>
+                    <?php
+                            }else{
+                    ?>
+                    <div class="alert alert-success">
+                        <b>Success!</b>
+                    </div>
+                    <?php
+                            }
+                        }
+                    ?>
+<form class="box action="login.php" method="post">
+  <h1>login For Hotel Reservation</h1>
+  <input type="text" name="" placeholder="Username">
+  <input type="password" name="" placeholder="password">
+  <li><a href="./index.php">Login</a></li>
+  <p class="message">No Account Yet? <a href="./signup.php">Register</a></p>
+</form>
+
+
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+</html>
